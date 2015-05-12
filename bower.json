@@ -1,0 +1,28 @@
+{
+  "name": "koco-resource-utilities",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cbcrc/koco-resource-utilities",
+  "authors": [
+    "Mark Moyes <mark.moyes@cbc.ca>"
+  ],
+  "description": "resource utilities for Knockout Components",
+  "main": "src/resource-utilities.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "koco",
+    "knockout"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.8.0"
+  }
+}
