@@ -41,15 +41,15 @@ define(['lodash'],
         ];
 
         resourceUtilities.isMedia = function(resourceType) {
-            return _.contains(mediaResourceTypes, resourceType);
+            return _.includes(mediaResourceTypes, resourceType);
         };
 
         resourceUtilities.isAudioMedia = function(resourceType) {
-            return _.contains(audioMediaResourceTypes, resourceType);
+            return _.includes(audioMediaResourceTypes, resourceType);
         };
 
         resourceUtilities.isLiveMedia = function(resourceType) {
-            return _.contains(liveMediaResourceTypes, resourceType);
+            return _.includes(liveMediaResourceTypes, resourceType);
         };
 
         return resourceUtilities;
