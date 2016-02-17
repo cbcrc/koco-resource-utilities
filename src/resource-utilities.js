@@ -26,7 +26,8 @@ define(['lodash'],
             resourceUtilities.resourceTypes.audio,
             resourceUtilities.resourceTypes.liveVideo,
             resourceUtilities.resourceTypes.liveAudio,
-            resourceUtilities.resourceTypes.track
+            resourceUtilities.resourceTypes.track,
+            resourceUtilities.resourceTypes.webradio
         ];
 
         var liveMediaResourceTypes = [
@@ -37,7 +38,8 @@ define(['lodash'],
         var audioMediaResourceTypes = [
             resourceUtilities.resourceTypes.audio,
             resourceUtilities.resourceTypes.liveAudio,
-            resourceUtilities.resourceTypes.track
+            resourceUtilities.resourceTypes.track,
+            resourceUtilities.resourceTypes.webradio
         ];
 
         resourceUtilities.isMedia = function(resourceType) {
