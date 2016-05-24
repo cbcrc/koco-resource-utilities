@@ -1,58 +1,56 @@
 // Copyright (c) CBC/Radio-Canada. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-define(['lodash'],
-    function(_) {
-        'use strict';
+import _ from 'lodash';
 
-        //This is for legacy (aka gthml) stuff, get rid of me plz!
 
-        var resourceUtilities = {};
+//This is for legacy (aka gthml) stuff, get rid of me plz!
 
-        resourceUtilities.resourceTypes = {
-            unspecified: 'Unspecified',
-            video: 'Video',
-            audio: 'Audio',
-            liveVideo: 'LiveVideo',
-            link: 'Link',
-            dossier: 'Dossier',
-            liveAudio: 'LiveAudio',
-            track: 'Track',
-            webradio: 'Webradio'
-        };
+var resourceUtilities = {};
 
-        var mediaResourceTypes = [
-            resourceUtilities.resourceTypes.video,
-            resourceUtilities.resourceTypes.audio,
-            resourceUtilities.resourceTypes.liveVideo,
-            resourceUtilities.resourceTypes.liveAudio,
-            resourceUtilities.resourceTypes.track,
-            resourceUtilities.resourceTypes.webradio
-        ];
+resourceUtilities.resourceTypes = {
+    unspecified: 'Unspecified',
+    video: 'Video',
+    audio: 'Audio',
+    liveVideo: 'LiveVideo',
+    link: 'Link',
+    dossier: 'Dossier',
+    liveAudio: 'LiveAudio',
+    track: 'Track',
+    webradio: 'Webradio'
+};
 
-        var liveMediaResourceTypes = [
-            resourceUtilities.resourceTypes.liveVideo,
-            resourceUtilities.resourceTypes.liveAudio
-        ];
+var mediaResourceTypes = [
+    resourceUtilities.resourceTypes.video,
+    resourceUtilities.resourceTypes.audio,
+    resourceUtilities.resourceTypes.liveVideo,
+    resourceUtilities.resourceTypes.liveAudio,
+    resourceUtilities.resourceTypes.track,
+    resourceUtilities.resourceTypes.webradio
+];
 
-        var audioMediaResourceTypes = [
-            resourceUtilities.resourceTypes.audio,
-            resourceUtilities.resourceTypes.liveAudio,
-            resourceUtilities.resourceTypes.track,
-            resourceUtilities.resourceTypes.webradio
-        ];
+var liveMediaResourceTypes = [
+    resourceUtilities.resourceTypes.liveVideo,
+    resourceUtilities.resourceTypes.liveAudio
+];
 
-        resourceUtilities.isMedia = function(resourceType) {
-            return _.includes(mediaResourceTypes, resourceType);
-        };
+var audioMediaResourceTypes = [
+    resourceUtilities.resourceTypes.audio,
+    resourceUtilities.resourceTypes.liveAudio,
+    resourceUtilities.resourceTypes.track,
+    resourceUtilities.resourceTypes.webradio
+];
 
-        resourceUtilities.isAudioMedia = function(resourceType) {
-            return _.includes(audioMediaResourceTypes, resourceType);
-        };
+resourceUtilities.isMedia = function(resourceType) {
+    return _.includes(mediaResourceTypes, resourceType);
+};
 
-        resourceUtilities.isLiveMedia = function(resourceType) {
-            return _.includes(liveMediaResourceTypes, resourceType);
-        };
+resourceUtilities.isAudioMedia = function(resourceType) {
+    return _.includes(audioMediaResourceTypes, resourceType);
+};
 
-        return resourceUtilities;
-    });
+resourceUtilities.isLiveMedia = function(resourceType) {
+    return _.includes(liveMediaResourceTypes, resourceType);
+};
+
+export default resourceUtilities;
