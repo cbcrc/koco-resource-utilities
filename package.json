@@ -16,7 +16,6 @@
     "build": "rm -rf dist && mkdir dist && cp -r src/* dist && rm -rf dist/*.js && babel src --out-dir dist --modules umd --presets es2015,stage-0"
   },
   "dependencies": {
-    "koco": "^1.0.0",
     "lodash": "~4.13.1"
   },
   "devDependencies": {
